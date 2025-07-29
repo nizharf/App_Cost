@@ -55,3 +55,7 @@ CREATE TABLE tb_bayar (
     status ENUM('cicil','lunas') DEFAULT 'cicil',
     FOREIGN KEY (id_tagihan) REFERENCES tb_tagihan(id)
 );
+
+-- Update Tabel tb_bayar untuk menambahkan kolom metode pembayaran
+ALTER TABLE tb_bayar 
+ADD COLUMN metode_pembayaran ENUM('cash','transfer','ewallet') DEFAULT 'cash' AFTER status;
