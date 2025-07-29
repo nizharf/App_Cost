@@ -98,3 +98,7 @@ INSERT INTO tb_tagihan (bulan, id_kmr_penghuni, jml_tagihan) VALUES
 INSERT INTO tb_bayar (id_tagihan, jml_bayar, status) VALUES
 (1, 500000, 'cicil'),
 (2, 1700000, 'lunas');
+
+-- Update #2: Tambahkan kolom tgl_bayar ke tb_bayar
+ALTER TABLE tb_bayar 
+ADD COLUMN tgl_bayar DATE AFTER metode_pembayaran;
